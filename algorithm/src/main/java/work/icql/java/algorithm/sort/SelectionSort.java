@@ -1,4 +1,4 @@
-package work.icql.java.java.algorithm.sort;
+package work.icql.java.algorithm.sort;
 
 /**
  * @author icql

@@ -1,4 +1,4 @@
-package work.icql.java.java.algorithm.search;
+package work.icql.java.algorithm.search;
 
 /**
  * @author icql
