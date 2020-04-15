@@ -16,10 +16,10 @@ public final class InnerClassSingleton {
      * 内部类实现懒加载
      */
     private static class SingletonHolder {
-        public final static InnerClassSingleton instance = new InnerClassSingleton();
+        public final static InnerClassSingleton INSTANCE = new InnerClassSingleton();
     }
 
     public static InnerClassSingleton getInstance() {
-        return SingletonHolder.instance;
+        return SingletonHolder.INSTANCE;
     }
 }
