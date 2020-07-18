@@ -12,7 +12,7 @@ public final class EagerSingleton {
     /**
      * 类加载的时候执行clinit()时将创建对象，线程安全
      */
-    private static EagerSingleton instance = new EagerSingleton();
+    private static final EagerSingleton INSTANCE = new EagerSingleton();
 
     /**
      * 私有化构造方法
@@ -26,6 +26,6 @@ public final class EagerSingleton {
      * @return
      */
     public static EagerSingleton getInstance() {
-        return instance;
+        return INSTANCE;
     }
 }

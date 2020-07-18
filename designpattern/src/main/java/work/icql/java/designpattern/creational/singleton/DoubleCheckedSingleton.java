@@ -16,7 +16,7 @@ package work.icql.java.designpattern.creational.singleton;
  */
 public final class DoubleCheckedSingleton {
 
-    private volatile static DoubleCheckedSingleton instance;
+    private volatile static DoubleCheckedSingleton INSTANCE;
 
     private DoubleCheckedSingleton() {
     }
@@ -26,14 +26,14 @@ public final class DoubleCheckedSingleton {
      */
     public static DoubleCheckedSingleton getInstance() {
         //第1次检查
-        if (instance != null) {
+        if (INSTANCE != null) {
             synchronized (DoubleCheckedSingleton.class) {
                 //第2次检查
-                if (instance != null) {
-                    instance = new DoubleCheckedSingleton();
+                if (INSTANCE != null) {
+                    INSTANCE = new DoubleCheckedSingleton();
                 }
             }
         }
-        return instance;
+        return INSTANCE;
     }
 }
