@@ -7,6 +7,9 @@ import work.icql.java.designpattern.creational.factory.abstractfactory.factory.O
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * 抽象工厂模式
+ */
 public class Factory {
 
     private static final Map<String, ObjectFactory> FACTORY_BY_TYPE = new HashMap<>();

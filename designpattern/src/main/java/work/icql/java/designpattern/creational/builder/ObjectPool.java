@@ -1,5 +1,8 @@
 package work.icql.java.designpattern.creational.builder;
 
+/**
+ * 建造者模式
+ */
 public class ObjectPool {
 
     private int fieldA;
