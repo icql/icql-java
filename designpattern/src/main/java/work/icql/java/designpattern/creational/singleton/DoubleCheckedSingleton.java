@@ -2,11 +2,9 @@ package work.icql.java.designpattern.creational.singleton;
 
 
 /**
- * @author icql
- * @version 1.0
- * @date 2019/1/12 14:23
- * @Title 单例：双重检查锁
- * @Description 初始化对象的3个步骤：
+ * 单例：双重检测
+ *
+ * 初始化对象的3个步骤：
  * 1）分配内存空间
  * 2）初始化对象
  * 3）将内存空间的地址赋值给对应的引用
@@ -21,15 +19,12 @@ public final class DoubleCheckedSingleton {
     private DoubleCheckedSingleton() {
     }
 
-    /**
-     * 获取单例
-     */
     public static DoubleCheckedSingleton getInstance() {
         //第1次检查
-        if (INSTANCE != null) {
+        if (INSTANCE == null) {
             synchronized (DoubleCheckedSingleton.class) {
                 //第2次检查
-                if (INSTANCE != null) {
+                if (INSTANCE == null) {
                     INSTANCE = new DoubleCheckedSingleton();
                 }
             }

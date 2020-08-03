@@ -2,11 +2,10 @@ package work.icql.java.designpattern.creational.singleton;
 
 
 /**
- * @author icql
- * @version 1.0
- * @date 2019/1/12 13:54
- * @Title 单例：饥饿模式——类加载时就创建对象，过早占用内存，存在性能问题
- * @Description EagerSingleton
+ * 单例：饥饿模式——类加载时就创建对象
+ * 过早占用内存，存在性能问题？
+ * 若初始化耗时，应该在应用启动时就初始化好，避免使用时再创建出现性能问题
+ * 占用内存多？按照fail-fast设计原则（有问题及早暴漏），启动时就能检查内存是否够用
  */
 public final class EagerSingleton {
     /**
@@ -14,17 +13,9 @@ public final class EagerSingleton {
      */
     private static final EagerSingleton INSTANCE = new EagerSingleton();
 
-    /**
-     * 私有化构造方法
-     */
     private EagerSingleton() {
     }
 
-    /**
-     * 获取单例
-     *
-     * @return
-     */
     public static EagerSingleton getInstance() {
         return INSTANCE;
     }

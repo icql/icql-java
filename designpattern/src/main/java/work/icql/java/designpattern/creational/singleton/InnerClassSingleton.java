@@ -2,21 +2,14 @@ package work.icql.java.designpattern.creational.singleton;
 
 
 /**
- * @author icql
- * @version 1.0
- * @date 2019/1/12 14:41
- * @Title 内部类实现懒加载
- * @Description InnerClassSingleton
+ * 单例：内部类-懒加载
  */
 public final class InnerClassSingleton {
     private InnerClassSingleton() {
     }
 
-    /**
-     * 内部类实现懒加载
-     */
     private static class SingletonHolder {
-        public final static InnerClassSingleton INSTANCE = new InnerClassSingleton();
+        public static final InnerClassSingleton INSTANCE = new InnerClassSingleton();
     }
 
     public static InnerClassSingleton getInstance() {
