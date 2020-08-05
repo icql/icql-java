@@ -1,7 +1,7 @@
 package work.icql.java.designpattern.structural.decorator;
 
 /**
- * 具体的构建1
+ * 具体的构件1
  */
 public class ConcreteComponent1 implements Component {
 
