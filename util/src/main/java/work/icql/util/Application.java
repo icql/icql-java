@@ -5,6 +5,6 @@ import work.icql.util.pdf.PdfMergeUtils;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        PdfMergeUtils.merge("C:\\Users\\icql\\Desktop\\test", "C:\\Users\\icql\\Desktop\\test");
+        PdfMergeUtils.merge("D:\\Download\\test", "C:\\Users\\Casstime\\Desktop\\test");
     }
 }

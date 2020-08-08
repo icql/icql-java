@@ -5,6 +5,7 @@ package work.icql.java.designpattern.behavioral.strategy;
  * @date 2019/8/9 17:16
  */
 public class Strategy {
+
     private Operation operation;
 
     public Strategy(Operation operation) {
