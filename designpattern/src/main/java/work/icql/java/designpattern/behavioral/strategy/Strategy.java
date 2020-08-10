@@ -1,18 +1,9 @@
 package work.icql.java.designpattern.behavioral.strategy;
 
 /**
- * @author qinglin.chen
- * @date 2019/8/9 17:16
+ * 策略接口定义
  */
-public class Strategy {
+public interface Strategy {
 
-    private Operation operation;
-
-    public Strategy(Operation operation) {
-        this.operation = operation;
-    }
-
-    public int executeStrategy(int num1, int num2) {
-        return operation.doOperation(num1, num2);
-    }
+    void operation();
 }
