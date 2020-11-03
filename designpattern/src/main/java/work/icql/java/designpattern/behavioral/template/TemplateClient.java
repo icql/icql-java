@@ -9,7 +9,6 @@ public class TemplateClient {
         AbstractClass demo1 = new ConcreteClass1();
         demo1.templateMethod();
 
-        //获取抽奖奖品规则
         AbstractClass demo2 = new ConcreteClass2();
         demo2.templateMethod();
     }
