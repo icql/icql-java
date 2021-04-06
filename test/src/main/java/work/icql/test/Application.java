@@ -27,7 +27,7 @@ public class Application {
             while (integer.get() < max.get()) {
                 if (integer.get() % 3 == 1) {
                     System.out.println("B");
-                    if(first){
+                    if (first) {
                         thread3.start();
                     }
                     first = false;
@@ -42,7 +42,7 @@ public class Application {
             while (integer.get() < max.get()) {
                 if (integer.get() % 3 == 0) {
                     System.out.println("A");
-                    if(first){
+                    if (first) {
                         thread2.start();
                     }
                     first = false;
