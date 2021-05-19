@@ -1,7 +1,5 @@
 package work.icql.java.algorithm.sort;
 
-import work.icql.java.algorithm.sort.isnotN.QuickSort;
-
 import java.util.Arrays;
 
 public class SortClient {
@@ -117,18 +115,25 @@ public class SortClient {
 
     private static int partition(int[] data, int left, int right) {
         //选取分区点，右边界
-        int pivotIndex = left;
+        int pivotIndex = right;
         int pivotValue = data[pivotIndex];
+        int boarderIndex = left;
+        int borderValue = data[boarderIndex];
         //遍历一遍
-        for (int cursor = left + 1; cursor <= right; cursor++) {
-            int current = data[cursor];
+        for (int i = left; i <= right; i++) {
+            int current = data[i];
             //当游标值小于分区点值时，交换边界点和游标值
             if (current < pivotValue) {
-                data[cursor] = pivotValue;
-                data[pivotIndex] = current;
-                pivotIndex = cursor;
+                data[i] = borderValue;
+                data[boarderIndex] = current;
+                //更新边界点和边界索引
+                boarderIndex++;
+                borderValue = data[boarderIndex];
             }
         }
+        data[right] = borderValue;
+        data[boarderIndex] = pivotValue;
+        pivotIndex = boarderIndex;
         return pivotIndex;
     }
 }
