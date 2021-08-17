@@ -1,0 +1,11 @@
+{
+  "AppPropHandler": {
+    "on": true,
+    "mysqlIp": "127.0.0.1",
+    "mysqlPort": "3306",
+    "mysqlUsername": "root",
+    "mysqlPassword": "root",
+    "redisIp": "127.0.0.1",
+    "redisPort": "6379"
+  }
+}
