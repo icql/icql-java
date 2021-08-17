@@ -1,4 +1,4 @@
-package work.icql.util.pdf;
+package work.icql.java.util.pdf;
 
 import com.itextpdf.text.Document;
 import com.itextpdf.text.pdf.PdfCopy;

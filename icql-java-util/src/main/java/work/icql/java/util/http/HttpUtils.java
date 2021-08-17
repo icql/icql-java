@@ -1,4 +1,4 @@
-package work.icql.util.http;
+package work.icql.java.util.http;
 
 import java.io.BufferedReader;
 import java.io.IOException;

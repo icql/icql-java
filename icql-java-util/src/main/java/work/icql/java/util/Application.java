@@ -1,6 +1,6 @@
-package work.icql.util;
+package work.icql.java.util;
 
-import work.icql.util.pdf.PdfMergeUtils;
+import work.icql.java.util.pdf.PdfMergeUtils;
 
 public class Application {
 
