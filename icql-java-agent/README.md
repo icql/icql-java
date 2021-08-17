@@ -1,4 +1,4 @@
-# aston-local-agent
+# icql-java-agent
 
 ## 简介
 
@@ -13,7 +13,7 @@
 
 ## 使用方法
 
-### 1) aston-local-agent.jar
+### 1) icql-java-agent.jar
 mvn package
 
 ### 2) 服务配置
@@ -23,7 +23,7 @@ mvn package
 -javaagent:[agent.jar绝对路径]=[配置参数文件绝对路径]
 
 示例:
--javaagent:/aston-local-agent-0.1.0-SNAPSHOT-jar-with-dependencies.jar=/agentArgs.json
+-javaagent:/icql-java-agent-0.1.0-SNAPSHOT-jar-with-dependencies.jar=/agentArgs.json
 ```
 
 ### 3) 配置参数
