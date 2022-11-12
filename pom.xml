@@ -13,7 +13,6 @@
         <module>icql-java-datastructure</module>
         <module>icql-java-designpattern</module>
         <module>icql-java-util</module>
-        <module>icql-java-test</module>
         <module>icql-java-agent</module>
     </modules>
 

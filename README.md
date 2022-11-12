@@ -1,11 +1,10 @@
 # icql-java
 
-## 简介
-``` shell
+```
 icql-java
+    ├──agent (java代理)
     ├──algorithm (算法)
     ├──datastructure (数据结构)
     ├──designpattern (设计模式)
-    ├──util (工具类)
-    ├──test (测试)
+    ├──util (常用工具)
 ```
