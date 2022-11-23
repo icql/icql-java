@@ -1,19 +1,19 @@
-package work.icql.java.designpattern.behavioral.state;
+package work.icql.java.designpattern.behavioral.state.impl_1;
 
 /**
  * 小马里奥
  */
-public class SmallMario implements IMario {
+public class SmallMarioState implements IMarioState {
 
-    private MarioStateMachine stateMachine;
+    private MarioStateMachineContext stateMachine;
 
-    public SmallMario(MarioStateMachine stateMachine) {
+    public SmallMarioState(MarioStateMachineContext stateMachine) {
         this.stateMachine = stateMachine;
     }
 
     @Override
     public void obtainMushRoom() {
-        stateMachine.setCurrentState(new SuperMario(stateMachine));
+        stateMachine.setCurrentState(new SuperMarioState(stateMachine));
         stateMachine.setScore(stateMachine.getScore() + 100);
     }
 

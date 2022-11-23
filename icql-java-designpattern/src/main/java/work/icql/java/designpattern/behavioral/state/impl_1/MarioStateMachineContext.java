@@ -1,21 +1,26 @@
-package work.icql.java.designpattern.behavioral.state;
+package work.icql.java.designpattern.behavioral.state.impl_1;
 
-public class MarioStateMachine implements IMario {
+public class MarioStateMachineContext implements IMarioState {
 
     private int score;
 
-    private IMario currentState;
+    private IMarioState currentState;
 
-    public MarioStateMachine() {
+    public MarioStateMachineContext() {
         this.score = 0;
-        this.currentState = new SmallMario(this);
+        this.currentState = new SmallMarioState(this);
+    }
+
+    public MarioStateMachineContext(IMarioState currentState) {
+        this.score = 0;
+        this.currentState = currentState;
     }
 
     public int getScore() {
         return this.score;
     }
 
-    public IMario getCurrentState() {
+    public IMarioState getCurrentState() {
         return this.currentState;
     }
 
@@ -23,7 +28,7 @@ public class MarioStateMachine implements IMario {
         this.score = score;
     }
 
-    public void setCurrentState(IMario currentState) {
+    public void setCurrentState(IMarioState currentState) {
         this.currentState = currentState;
     }
 
