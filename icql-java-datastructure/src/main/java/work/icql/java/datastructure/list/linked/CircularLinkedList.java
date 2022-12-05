@@ -85,6 +85,11 @@ public class CircularLinkedList<E> implements List<E> {
     }
 
     @Override
+    public void traversal() {
+
+    }
+
+    @Override
     public String toString() {
         StringBuilder stringBuilder = new StringBuilder("CircularLinkedList");
         Node<E> node = head;

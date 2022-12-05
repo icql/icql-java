@@ -15,4 +15,7 @@ public interface List<E> {
     E get(int index);
 
     int size();
+
+    //遍历
+    void traversal();
 }

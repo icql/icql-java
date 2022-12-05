@@ -88,6 +88,11 @@ public class DoubleLinkedList<E> implements List<E> {
     }
 
     @Override
+    public void traversal() {
+
+    }
+
+    @Override
     public String toString() {
         StringBuilder stringBuilder = new StringBuilder("DoubleLinkedList");
         Node<E> node = head;

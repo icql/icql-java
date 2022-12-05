@@ -12,7 +12,9 @@ public class Client {
         list.add("3");
         list.add("4");
         list.add("5");
-        list.remove(7);
+
+        list.traversal();
+
         System.out.println("list: " + list.toString());
 
         Stack<String> stack = new LinkedStack<>();

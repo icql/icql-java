@@ -75,6 +75,15 @@ public class ArrayList<E> implements List<E> {
     }
 
     @Override
+    public void traversal() {
+        System.out.println("traversal start");
+        for (int i = 0; i < size; i++) {
+            System.out.println(elements[i]);
+        }
+        System.out.println("traversal end");
+    }
+
+    @Override
     public String toString() {
         StringBuilder stringBuilder = new StringBuilder("ArrayList");
         for (int i = 0; i < size; i++) {

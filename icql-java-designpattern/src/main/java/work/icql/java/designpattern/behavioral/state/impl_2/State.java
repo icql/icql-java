@@ -13,7 +13,7 @@ public enum State {
 
     private static final Chain<State> SUCCESS;
     private static final Chain<State> FAIL;
-    private static final Chain<State> TIMEOUT;
+    private static final Chain<State> EXCEPTION;
 
 
     static {
@@ -27,9 +27,20 @@ public enum State {
                 .from(STATE_C).to(STATE_A)
                 .from(STATE_D).to(STATE_A)
                 .build();
-        TIMEOUT = Chain.<State>builder()
+        EXCEPTION = Chain.<State>builder()
                 .from(STATE_A).to(STATE_D)
                 .build();
+    }
+
+
+    public State doEvent(State currentState) {
+        try {
+            return success(currentState);
+
+
+        } catch (Exception e) {
+            return exception(currentState);
+        }
     }
 
     public State success(State currentState) {
@@ -48,10 +59,10 @@ public enum State {
         return nextState;
     }
 
-    public State timeout(State currentState) {
-        State nextState = TIMEOUT.getNextState(currentState);
+    public State exception(State currentState) {
+        State nextState = EXCEPTION.getNextState(currentState);
         if (Objects.isNull(nextState)) {
-            throw new RuntimeException("timeout, currentState=" + currentState + ", nextState is null");
+            throw new RuntimeException("exception, currentState=" + currentState + ", nextState is null");
         }
         return nextState;
     }

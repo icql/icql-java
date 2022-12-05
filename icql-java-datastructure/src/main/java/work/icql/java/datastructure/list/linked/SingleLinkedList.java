@@ -79,6 +79,17 @@ public class SingleLinkedList<E> implements List<E> {
     }
 
     @Override
+    public void traversal() {
+        System.out.println("traversal start");
+        traversal1(head);
+        System.out.println("traversal end");
+
+        System.out.println("traversal start");
+        traversal2(head);
+        System.out.println("traversal end");
+    }
+
+    @Override
     public String toString() {
         StringBuilder stringBuilder = new StringBuilder("SingleLinkedList");
         Node<E> node = head;
@@ -92,6 +103,20 @@ public class SingleLinkedList<E> implements List<E> {
         return stringBuilder.toString();
     }
 
+    private void traversal1(Node<E> e) {
+        if (Objects.isNull(e)) {
+            return;
+        }
+        System.out.println(e);
+        traversal1(e.next);
+    }
+
+    private void traversal2(Node<E> e) {
+        while (Objects.nonNull(e)) {
+            System.out.println(e);
+            e = e.next;
+        }
+    }
 
     private void checkIndex(int index) {
         if (index < 0 || (size > 0 && index >= size) || (size == 0 && index > 0)) {
