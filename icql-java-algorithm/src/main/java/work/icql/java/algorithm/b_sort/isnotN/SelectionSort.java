@@ -1,4 +1,4 @@
-package work.icql.java.algorithm.sort.isnotN;
+package work.icql.java.algorithm.b_sort.isnotN;
 
 /**
  * 选择排序：

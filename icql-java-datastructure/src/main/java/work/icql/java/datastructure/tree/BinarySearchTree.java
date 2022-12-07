@@ -1,6 +1,7 @@
 package work.icql.java.datastructure.tree;
 
 import java.util.LinkedList;
+import java.util.Objects;
 import java.util.Queue;
 import java.util.Stack;
 
@@ -228,7 +229,7 @@ public class BinarySearchTree {
 
     //region 层序遍历
 
-    public void levelOrder() {
+    public void levelOrderNR() {
         Queue<Node> queue = new LinkedList<>();
         queue.add(root);
         while (!queue.isEmpty()) {
@@ -241,6 +242,24 @@ public class BinarySearchTree {
                 queue.add(cur.right);
             }
         }
+    }
+
+    public void levelOrder() {
+        Queue<Node> queue = new LinkedList<>();
+        queue.add(root);
+        levelOrder(root, queue);
+    }
+
+    public void levelOrder(Node node, Queue<Node> queue) {
+        if (Objects.isNull(node)) {
+            return;
+        }
+        queue.remove();
+        System.out.println(node.e);
+        queue.add(node.left);
+        queue.add(node.right);
+        levelOrder(node.left, queue);
+        levelOrder(node.right, queue);
     }
 
     //endregion
@@ -257,16 +276,21 @@ public class BinarySearchTree {
         tree.add(7);
         tree.add(6);
         tree.add(8);
-        tree.remove(7);
+        //tree.remove(7);
 
-        System.out.println(tree.contains(98));
+        //System.out.println(tree.contains(98));
 
         //tree.preOrder();
         //tree.preOrderNR();
         //tree.midOrder();
         //tree.postOrder();
+        tree.levelOrderNR();
 
-        System.out.println(tree.maxHeight());
-        System.out.println(tree.minHeight());
+        System.out.println("=======");
+
+        tree.levelOrder();
+        //
+        //System.out.println(tree.maxHeight());
+        //System.out.println(tree.minHeight());
     }
 }

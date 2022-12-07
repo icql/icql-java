@@ -1,4 +1,4 @@
-package work.icql.java.algorithm.sort;
+package work.icql.java.algorithm.b_sort;
 
 import java.util.Arrays;
 

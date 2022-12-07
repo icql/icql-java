@@ -1,4 +1,4 @@
-package work.icql.java.algorithm.sort.isN;
+package work.icql.java.algorithm.b_sort.isN;
 
 /**
  * 桶排序：

@@ -1,4 +1,4 @@
-package work.icql.java.algorithm.leetcode;
+package work.icql.java.algorithm.a_link;
 
 import java.util.LinkedHashMap;
 import java.util.Map;
