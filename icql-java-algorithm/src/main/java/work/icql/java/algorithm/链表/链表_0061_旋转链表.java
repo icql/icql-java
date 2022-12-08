@@ -1,8 +1,8 @@
-package work.icql.java.algorithm.a_link;
+package work.icql.java.algorithm.链表;
 
 import java.util.Objects;
 
-public class Link_0061_rotateRight {
+public class 链表_0061_旋转链表 {
     static class ListNode {
         int val;
         ListNode next;
@@ -61,7 +61,7 @@ public class Link_0061_rotateRight {
 
 
     public static void main(String[] args) {
-        Link_0061_rotateRight link = new Link_0061_rotateRight();
+        链表_0061_旋转链表 link = new 链表_0061_旋转链表();
 
         ListNode l1 = new ListNode(3);
         l1.next = new ListNode(9);

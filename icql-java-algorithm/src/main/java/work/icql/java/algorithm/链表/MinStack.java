@@ -1,4 +1,4 @@
-package work.icql.java.algorithm.a_link;
+package work.icql.java.algorithm.链表;
 
 import java.util.Stack;
 

@@ -1,8 +1,8 @@
-package work.icql.java.algorithm.a_link;
+package work.icql.java.algorithm.链表;
 
 import java.util.Objects;
 
-public class Link_0002_addTwoNumbers {
+public class 链表_0002_两数相加 {
 
     static class ListNode {
         int val;
@@ -57,7 +57,7 @@ public class Link_0002_addTwoNumbers {
     }
 
     public static void main(String[] args) {
-        Link_0002_addTwoNumbers link = new Link_0002_addTwoNumbers();
+        链表_0002_两数相加 link = new 链表_0002_两数相加();
 
         ListNode l1 = new ListNode(2);
         l1.next = new ListNode(4);

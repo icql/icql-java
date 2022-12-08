@@ -1,4 +1,4 @@
-package work.icql.java.algorithm.b_sort.isnotN;
+package work.icql.java.algorithm.排序.isnotN;
 
 import java.util.Arrays;
 

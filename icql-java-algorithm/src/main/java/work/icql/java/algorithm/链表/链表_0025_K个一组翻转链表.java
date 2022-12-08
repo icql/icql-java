@@ -1,8 +1,8 @@
-package work.icql.java.algorithm.a_link;
+package work.icql.java.algorithm.链表;
 
 import java.util.Objects;
 
-public class Link_0025_reverseKGroup {
+public class 链表_0025_K个一组翻转链表 {
     static class ListNode {
         int val;
         ListNode next;
@@ -70,7 +70,7 @@ public class Link_0025_reverseKGroup {
 
 
     public static void main(String[] args) {
-        Link_0025_reverseKGroup link = new Link_0025_reverseKGroup();
+        链表_0025_K个一组翻转链表 link = new 链表_0025_K个一组翻转链表();
 
         ListNode l1 = new ListNode(3);
         l1.next = new ListNode(9);

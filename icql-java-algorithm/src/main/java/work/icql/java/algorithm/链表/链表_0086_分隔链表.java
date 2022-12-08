@@ -1,8 +1,8 @@
-package work.icql.java.algorithm.a_link;
+package work.icql.java.algorithm.链表;
 
 import java.util.Objects;
 
-public class Link_0081_partition {
+public class 链表_0086_分隔链表 {
     static class ListNode {
         int val;
         ListNode next;
@@ -49,7 +49,7 @@ public class Link_0081_partition {
 
 
     public static void main(String[] args) {
-        Link_0081_partition link = new Link_0081_partition();
+        链表_0086_分隔链表 link = new 链表_0086_分隔链表();
         
         ListNode l1 = new ListNode(1);
         l1.next = new ListNode(2);

@@ -1,8 +1,8 @@
-package work.icql.java.algorithm.a_link;
+package work.icql.java.algorithm.链表;
 
 import java.util.Objects;
 
-public class Link_0021_mergeTwoLists {
+public class 链表_0021_合并两个有序链表 {
     static class ListNode {
         int val;
         ListNode next;
@@ -53,7 +53,7 @@ public class Link_0021_mergeTwoLists {
 
 
     public static void main(String[] args) {
-        Link_0021_mergeTwoLists link = new Link_0021_mergeTwoLists();
+        链表_0021_合并两个有序链表 link = new 链表_0021_合并两个有序链表();
 
         ListNode l1 = new ListNode(2);
         l1.next = new ListNode(4);
