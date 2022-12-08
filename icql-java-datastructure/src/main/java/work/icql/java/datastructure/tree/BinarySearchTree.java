@@ -176,6 +176,24 @@ public class BinarySearchTree {
         preOrder(node.right);
     }
 
+    public void preOrder1() {
+        preOrder1(root);
+    }
+
+    private void preOrder1(Node node) {
+        if (node == null) {
+            return;
+        }
+
+        Node left = node.left;
+        Node right = node.right;
+        node.left = right;
+        node.right = left;
+
+        preOrder1(left);
+        preOrder1(right);
+    }
+
     public void preOrderNR() {
         Stack<Node> stack = new Stack<>();
         stack.push(root);
@@ -272,25 +290,22 @@ public class BinarySearchTree {
         BinarySearchTree tree = new BinarySearchTree();
         tree.add(5);
         tree.add(2);
-        tree.add(5);
         tree.add(7);
         tree.add(6);
         tree.add(8);
-        //tree.remove(7);
 
-        //System.out.println(tree.contains(98));
+        tree.levelOrder();
 
-        //tree.preOrder();
+        tree.preOrder1();
+
+        tree.levelOrder();
+
+
         //tree.preOrderNR();
         //tree.midOrder();
         //tree.postOrder();
-        tree.levelOrderNR();
+        //tree.levelOrderNR();
+        //tree.levelOrder();
 
-        System.out.println("=======");
-
-        tree.levelOrder();
-        //
-        //System.out.println(tree.maxHeight());
-        //System.out.println(tree.minHeight());
     }
 }
